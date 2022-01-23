@@ -38,3 +38,19 @@ xclock
 gedit 
 ```
 ![Running Gedit](app_out2.jpg "Gedit")
+
+
+# Alternately Running at Startup Automatically
+1. Go to the home directory using `cd ~`
+2. Then check for the `.bashrc` file
+3. Edit and append the following lines at the end of the `.bashrc` file
+
+```
+WINDOWS_HOST=`cat /etc/resolv.conf | grep nameserver | cut -d ' ' -f 2`
+export DISPLAY=$WINDOWS_HOST:0.0
+echo DISPLAY OUT to $DISPLAY
+```
+4. close the terminal and reopen or source it
+```
+source .bashrc
+```
