@@ -64,3 +64,7 @@ WINDOWS_HOST=`echo $SSH_CLIENT | awk '{ print $1}'`
 export DISPLAY=$WINDOWS_HOST:0.0
 echo DISPLAY OUT to $DISPLAY
 ```
+or
+```
+export DISPLAY=`echo $SSH_CLIENT | awk '{ print $1}'`:0.0
+```
