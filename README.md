@@ -54,3 +54,13 @@ echo DISPLAY OUT to $DISPLAY
 ```
 source .bashrc
 ```
+
+
+# Alternately if you are in the WSL using SSH terminal
+You can enter the following lines in the terminal while using SSH terminal
+
+```
+WINDOWS_HOST=`echo $SSH_CLIENT | awk '{ print $1}'`
+export DISPLAY=$WINDOWS_HOST:0.0
+echo DISPLAY OUT to $DISPLAY
+```
